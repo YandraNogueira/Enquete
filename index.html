@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enquete</title>
+    <style>
+        body{
+            background-color: #9980FA;
+        }
+        .pai{
+            
+            margin-top: 26%;
+            
+        }
+        .enquete{
+            height: 250px;
+            width: 250px;
+            background-color: #8854d0;
+            color:white;
+            border-radius: 50%;
+            border: 2px solid white;
+            text-align: center;
+            margin-top: -20%;
+            /*margin-left: -30px;*/
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+        }
+        .botao{
+            margin-top: 2%;
+            margin-left: 1%;
+            margin-bottom: 2%;
+
+        }
+        #sim{
+            background-color: #0be881;
+            border: 3px solid #05c46b;
+            border-radius: 4px;
+            color:white;
+            height: 30px;
+            width: 60px;
+        }
+        #nao{
+            background-color: #ff5e57;
+            border: 3px solid #ff3f34;
+            border-radius: 4px;
+            color:white;
+            height: 30px;
+            width: 60px;
+        }
+        .result{
+            color: #5b1d99;
+        }
+        .bloco{
+            margin-top: 10px;
+            text-align: center;
+        }
+        #s{
+            background-color: #0be881;
+            height: 20px;
+            width: 10px;
+        }
+        #n{
+            background-color: #ff5e57;
+            height: 20px;
+            width: 10px;
+        }
+        fieldset{
+            width: 100px;
+           /* margin-left: -80px;*/
+            /*margin-right: 800px;*/
+            color: white;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="pai"> 
+        <center><div class="enquete"><h2>Você está bem de saúde?</h2></div>
+        <button type="button" class="botao" id="sim" onclick="vsim()"><strong>Sim</strong></button>
+        <button type="button" class="botao" id="nao" onclick="vnao()"><strong>Não</strong></button>
+        <h2 class="result">Resultado:</h2>
+        <fieldset><div class="bloco" id="s">0</div>
+        <div class="bloco" id="n">0</div></fieldset>
+    </div></center>
+    
+    <script>
+        var largura = 10;
+        var votos = 0;
+        
+        function vsim(){
+        largura += 10;
+        votos +=1;
+        
+        document.querySelector("#s").style.width = largura + "px";
+        document.querySelector("#s").innerHTML = votos;
+    }
+        var largura2 = 10;
+        var votos2 = 0;
+
+        function vnao(){
+        largura2 += 10;
+        votos2 += 1;
+
+        document.querySelector("#n").style.width = largura2 + "px";
+        document.querySelector("#n").innerHTML = votos2;
+
+    }
+    </script>
+</body>
+</html>
